@@ -1,46 +1,48 @@
-import { useState } from "react";
+// import { useState } from "react";
 import searchIcon from "../../assets/SearchIcon.png";
 import styles from "./Search.module.css";
 import navbarStyles from "../Navbar/Navbar.module.css";
 
 const Search = ({ data, page }) => {
-  let [value, setValue] = useState("");
-  let [search, setSearch] = useState([]);
-  const handleInput = (e) => {
-    setValue(e.target.value);
+  //   let [value, setValue] = useState("");
+  //   let [search, setSearch] = useState([]);
+  //   const handleInput = (e) => {
+  //     setValue(e.target.value);
 
-    let arr = data.filter((album) => {
-      return album.title.toLowerCase().includes(value.toLowerCase());
-    });
-    setSearch(arr);
-  };
+  //     let arr = data.filter((album) => {
+  //       return album.title.toLowerCase().includes(value.toLowerCase());
+  //     });
+  //     setSearch(arr);
+  //   };
 
-  const handleSubmit = (e) => {
-    console.log("click");
-  };
+  // const handleSubmit = (e) => {
+  //   console.log("click");
+  // };
   return (
     <div>
       <div className={navbarStyles.searchField}>
         <input
           type="search"
-          placeholder={
-            page === "home"
-              ? "Search an Album of Your Choice"
-              : "Search a Song of Your Choice"
-          }
-          value={value}
-          onChange={handleInput}
+          placeholder=// page === "home"
+          //   ? 
+          "Search an Album of Your Choice"
+          // :
+          // "Search a Song of Your Choice"
+
+          // value={value}
+          // onChange={handleInput}
         />
         <div>
           <img
             src={searchIcon}
             alt="Search Icon"
-            onClick={handleSubmit}
+            // onClick={handleSubmit}
             className={styles.searchIcon}
           />
         </div>
       </div>
-      <div className={styles.searchResultWrapper}>
+
+      {/* <div className={styles.searchResultWrapper}>
         {value.length > 0 && (
           <div className={styles.searchResult}>
             {!search.length ? (
@@ -82,7 +84,7 @@ const Search = ({ data, page }) => {
             )}
           </div>
         )}
-      </div>
+      </div> */}
     </div>
   );
 };
