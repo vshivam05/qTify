@@ -1,6 +1,6 @@
 
 import styles from "./Hero.module.css";
-import heroImage from "../../assets/hero_headphones";
+import heroImage from "../../assets/hero_headphones.png";
 
 const Hero = () => {
   return (
@@ -13,6 +13,9 @@ const Hero = () => {
     </div>
   );
 };
+
+
+
 
 export default Hero;
 
